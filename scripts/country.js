@@ -63,15 +63,15 @@ class CountryManager {
                 if(this.isAtWar(enemy_country, country)) {
                     // Cancel it
                     this.endWar(enemy_country, country)
-                    console.log(country,"halted the troops of",enemy_country)
+                    // console.log(country,"halted the troops of",enemy_country)
                 } else if (this.isAtWar(country, enemy_country)) {
                     // If we're already fighting THEM, quit it
                     this.endWar(country, enemy_country)
-                    console.log(country,"stopped their assault against",enemy_country)
+                    // console.log(country,"stopped their assault against",enemy_country)
                 } else {
                     // If no war, get fightin'
                     this.declareWar(country, enemy_country)
-                    console.log("War declared by",country,"against",enemy_country)
+                    // console.log("War declared by",country,"against",enemy_country)
                 }
             }
         }
