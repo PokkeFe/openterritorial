@@ -58,7 +58,7 @@ class World {
     }
 
     tick() {
-        let x, y, texel_values, root_position;
+        let x, y, texel_values;
         let neighbor_x, neighbor_y, neighbor_coords, neighbor_texel_values;
         for(x = 0; x < this.MAP_WIDTH; x++) {
             for(y = 0; y < this.MAP_HEIGHT; y++) {
@@ -97,7 +97,7 @@ class World {
                 if(texel_values[3] == 0) continue;
                 texel_values.pop() // Remove the alpha channel
                 if(this._isBorderPixel(x, y, texel_values)) {
-                    this._setPixelColor(this.border_highlight_map, x, y, 255, 255, 255, 50)
+                    this._setPixelColor(this.border_highlight_map, x, y, 0, 0, 0, 50)
                 }
             }
         }
